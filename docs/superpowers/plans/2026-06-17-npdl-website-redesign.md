@@ -412,8 +412,8 @@ Use the standard `<head>` (title "Home"), paste canonical header (set `aria-curr
           </div>
         </div>
         <figure>
-          <img src="images/Simple_Bedny_Banner.jpg" alt="WRITE DESCRIPTIVE ALT: what the banner image shows (brains/lab). Lab to verify.">
-          <figcaption><b>Fig. 1</b>From our neuroimaging research on the human brain.</figcaption>
+          <img src="images/brains.jpg" alt="Inflated MRI brain surfaces with colored activation maps; warm colors mark regions more active for some tasks, cool colors for others, shown across several individuals.">
+          <figcaption><b>Fig. 1</b>Task-driven cortical activity across individuals in our neuroimaging studies.</figcaption>
         </figure>
       </div>
     </div>
@@ -434,7 +434,7 @@ Use the standard `<head>` (title "Home"), paste canonical header (set `aria-curr
       </figure>
       <div>
         <span class="num">01 — Plasticity</span>
-        <h2>Cortical plasticity in blindness</h2>
+        <h3>Cortical plasticity in blindness</h3>
         <p>In sighted people, much of the occipital lobe is dedicated to vision. What happens when it
           never receives its typical input? In blindness, “visual” areas take on higher-cognitive
           functions — language, mathematical reasoning, and executive control — revealing how
@@ -450,7 +450,7 @@ Use the standard `<head>` (title "Home"), paste canonical header (set `aria-curr
       </figure>
       <div>
         <span class="num">02 — Concepts</span>
-        <h2>Conceptual development</h2>
+        <h3>Conceptual development</h3>
         <p>How does experience contribute to the concepts we form? We compare what blind and sighted
           people know about things only directly accessible through vision — light, color, and acts of
           seeing — to isolate the roles of sensory experience and of language in human knowledge.</p>
