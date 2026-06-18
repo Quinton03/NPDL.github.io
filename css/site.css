@@ -155,7 +155,7 @@ li.pub .tag{font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform
 ul.news{list-style:none;margin:0;padding:0;max-width:48em}
 ul.news li{padding:20px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:120px 1fr;gap:20px}
 ul.news .date{color:var(--teal);font-weight:700;font-size:14px}
-ul.news h3{margin:0 0 6px;font-size:18px;font-weight:700;color:var(--ink)}
+ul.news h2{margin:0 0 6px;font-size:18px;font-weight:700;color:var(--ink)}
 ul.news p{margin:0}
 
 /* ---------- photos gallery / timeline ---------- */
