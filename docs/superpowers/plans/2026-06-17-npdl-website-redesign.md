@@ -353,7 +353,7 @@ Canonical **footer** (goes right before `</body>`):
         <li>3400 N. Charles St, Ames Hall 108, Baltimore MD 21218</li>
         <li><a href="tel:+14108709895">(410) 870-9895</a></li>
         <li><a href="mailto:plasticity_lab@jhu.edu">plasticity_lab@jhu.edu</a></li>
-        <li><a href="https://scholar.google.com/citations?user=BO08yNQAAAAJ&hl=en">Google Scholar</a></li>
+        <li><a href="https://scholar.google.com/citations?user=BO08yNQAAAAJ&amp;hl=en">Google Scholar</a></li>
       </ul>
     </nav>
   </div>
@@ -528,7 +528,7 @@ Structure:
   <h1>Our research, in print</h1>
   <p>Peer-reviewed articles, reviews, and chapters from the lab. Each title links to the paper.
      Names in <b style="color:#fff">bold</b> indicate the lab’s principal investigator.</p>
-  <a class="scholar" href="https://scholar.google.com/citations?user=BO08yNQAAAAJ&hl=en">↗ Latest on Google Scholar</a>
+  <a class="scholar" href="https://scholar.google.com/citations?user=BO08yNQAAAAJ&amp;hl=en">↗ Latest on Google Scholar</a>
 </div></div>
 
 <main id="main" class="wrap"><div class="layout">
