@@ -25,39 +25,65 @@
         <li><a href="news.html">News</a></li>
         <li><a href="photos.html">Photos</a></li>
         <li><a href="participate.html" class="cta">Participate</a></li>
+        <li><a href="asset-reference.html" class="nav-dev">Assets</a></li>
       </ul>
     </nav>
   </div>
 </header>
 <!-- /SHARED HEADER -->
 
+<!-- Measures the real sticky-header height so the hero below can fill exactly
+     the remaining viewport height. Progressive enhancement only: the CSS
+     fallback value is used if JavaScript is unavailable. -->
+<script>
+(function(){
+  var header = document.querySelector('header.site');
+  function setHeaderHeight(){
+    if (header) document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+  }
+  setHeaderHeight();
+  window.addEventListener('resize', setHeaderHeight);
+})();
+</script>
+
 <main id="main">
   <section class="hero">
     <div class="wrap">
-      <div class="top"><span class="kicker">Cognitive Neuroscience &amp; Psychology</span></div>
-      <div class="grid">
+      <div class="grid rev">
+        <figure class="mark">
+          <img src="images/bednylab_logo.svg" alt="Neuroplasticity &amp; Development Lab logo: a line drawing of a tree whose canopy forms the shape of a brain, with roots branching down into symbols for numbers, letters, faces, and music.">
+        </figure>
         <div>
-          <span class="kicker" style="color:var(--teal-pale)">Neuroplasticity &amp; Development Laboratory</span>
-          <h1>How do nature and nurture shape the human mind and brain?</h1>
-          <p class="lead">We investigate the origins and structure of human cognition by comparing the
-            minds and brains of people with different developmental experiences — congenitally blind,
-            late-blind, and sighted individuals.</p>
+          <span class="kicker" style="color:var(--teal-pale)">Bedny Lab</span>
+          <h1>Neuroplasticity &amp; Development Laboratory</h1>
+          <p class="affil">Department of Psychological &amp; Brain Sciences, Johns Hopkins University</p>
           <div class="btns">
             <a class="btn btn-primary" href="research.html">Explore our research</a>
             <a class="btn btn-ghost" href="participate.html">Participate in a study</a>
           </div>
         </div>
-        <figure>
-          <img src="images/brains.jpg" alt="Inflated MRI brain surfaces with colored activation maps; warm colors mark regions more active for some tasks, cool colors for others, shown across several individuals.">
-          <figcaption><b>Fig. 1</b>Task-driven cortical activity across individuals in our neuroimaging studies.</figcaption>
-        </figure>
       </div>
     </div>
   </section>
 
-  <section class="thesis"><div class="wrap">
-    <p>We study the human mind by studying minds that have been <em>shaped differently</em> — and the brains that grow with them.</p>
-  </div></section>
+  <section class="thesis">
+    <aside class="thesis-margin thesis-margin--left" aria-hidden="true">
+      <div id="thesis-shader-left" class="thesis-margin__shader"></div>
+    </aside>
+    <aside class="thesis-margin thesis-margin--right" aria-hidden="true">
+      <div id="thesis-shader-right" class="thesis-margin__shader"></div>
+    </aside>
+    <div class="thesis-frame">
+      <div class="thesis-grid">
+        <p class="thesis-lead">How does developmental experience affect the human mind and brain?</p>
+        <p class="thesis-body">What is the role of experience in structuring concepts of events, objects
+          and mental states? How are such abstract concepts implemented in neural circuits? Our lab
+          investigates these longstanding philosophical puzzles using the methods of cognitive
+          neuroscience and psychology. We study the origins and structure of human cognition by comparing
+          the minds and brains of people with different developmental experiences.</p>
+      </div>
+    </div>
+  </section>
 
   <section class="block"><div class="wrap">
     <div class="sec-head"><h2>Research</h2><span class="rule"></span>
@@ -107,7 +133,11 @@
   </div></section>
 
   <section class="join">
-    <img class="bg" src="images/Lindsay_brain_photo.jpg" alt="">
+    <div class="join-photos" aria-hidden="true">
+      <img src="images/Lindsay_brain_photo.jpg" alt="">
+      <img src="images/marina_judy_tms.jpg" alt="">
+      <img src="images/timeline/2017/tms.jpg" alt="">
+    </div>
     <div class="scrim"></div>
     <div class="wrap">
       <span class="kicker">Get involved</span>
@@ -152,5 +182,6 @@
   <div class="legal">© 2026 Neuroplasticity &amp; Development Laboratory</div>
 </footer>
 <!-- /SHARED FOOTER -->
+<script src="js/hero-fx.js" defer></script>
 </body>
 </html>
