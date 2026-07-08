@@ -8,24 +8,29 @@
   },
   "scripts": {
     "dev": "vite build --watch",
-    "build": "vite build"
+    "build:hero": "vite build",
+    "start": "serve . --listen tcp://0.0.0.0:${PORT:-3000}"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NPDL/NPDL.github.io.git"
+    "url": "git+https://github.com/Quinton03/npdl-website.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/NPDL/NPDL.github.io/issues"
+    "url": "https://github.com/Quinton03/npdl-website/issues"
   },
-  "homepage": "https://github.com/NPDL/NPDL.github.io#readme",
+  "homepage": "https://github.com/Quinton03/npdl-website#readme",
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "@paper-design/shaders-react": "^0.0.76",
     "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react-dom": "^19.2.7",
+    "serve": "^14.2.4"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^6.0.3",
