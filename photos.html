@@ -10,13 +10,22 @@
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 <!-- SHARED HEADER — keep identical across all pages; only change aria-current -->
+<input type="checkbox" id="nav-toggle" class="nav-toggle-cb" aria-label="Open navigation menu">
 <header class="site">
   <div class="wrap bar">
+    <label class="nav-toggle" for="nav-toggle" aria-hidden="true"><span class="nav-toggle__bars"></span></label>
     <a class="brand" href="index.html">
       <b>Neuroplasticity &amp; Development Lab</b>
       <span>Bedny Lab · Johns Hopkins</span>
     </a>
-    <nav class="main" aria-label="Primary">
+  </div>
+</header>
+<label class="nav-overlay" for="nav-toggle" aria-hidden="true"></label>
+<nav class="main drawer" id="site-nav" aria-label="Primary">
+  <div class="drawer__head">
+    <span class="drawer__title">Menu</span>
+    <label class="nav-close" for="nav-toggle" aria-label="Close navigation menu">&times;</label>
+  </div>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="research.html">Research</a></li>
@@ -27,9 +36,7 @@
         <li><a href="participate.html" class="cta">Participate</a></li>
         <li><a href="asset-reference.html" class="nav-dev">Assets</a></li>
       </ul>
-    </nav>
-  </div>
-</header>
+</nav>
 <!-- /SHARED HEADER -->
 
 <main id="main">

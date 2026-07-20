@@ -10,13 +10,22 @@
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 <!-- SHARED HEADER — keep identical across all pages; only change aria-current -->
+<input type="checkbox" id="nav-toggle" class="nav-toggle-cb" aria-label="Open navigation menu">
 <header class="site">
   <div class="wrap bar">
+    <label class="nav-toggle" for="nav-toggle" aria-hidden="true"><span class="nav-toggle__bars"></span></label>
     <a class="brand" href="index.html">
       <b>Neuroplasticity &amp; Development Lab</b>
       <span>Bedny Lab · Johns Hopkins</span>
     </a>
-    <nav class="main" aria-label="Primary">
+  </div>
+</header>
+<label class="nav-overlay" for="nav-toggle" aria-hidden="true"></label>
+<nav class="main drawer" id="site-nav" aria-label="Primary">
+  <div class="drawer__head">
+    <span class="drawer__title">Menu</span>
+    <label class="nav-close" for="nav-toggle" aria-label="Close navigation menu">&times;</label>
+  </div>
       <ul>
         <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="research.html">Research</a></li>
@@ -27,9 +36,7 @@
         <li><a href="participate.html" class="cta">Participate</a></li>
         <li><a href="asset-reference.html" class="nav-dev">Assets</a></li>
       </ul>
-    </nav>
-  </div>
-</header>
+</nav>
 <!-- /SHARED HEADER -->
 
 <!-- Measures the real sticky-header height so the hero below can fill exactly
@@ -49,14 +56,14 @@
 <main id="main">
   <section class="hero">
     <div class="wrap">
+      <p class="affil">Department of Psychological &amp; Brain Sciences<br>Johns Hopkins University</p>
       <div class="grid rev">
         <figure class="mark">
           <img src="images/bednylab_logo.svg" alt="Neuroplasticity &amp; Development Lab logo: a line drawing of a tree whose canopy forms the shape of a brain, with roots branching down into symbols for numbers, letters, faces, and music.">
         </figure>
         <div>
-          <span class="kicker" style="color:var(--teal-pale)">Bedny Lab</span>
+          <span class="kicker" style="color:var(--teal-pale)">Dr. Marina Bedny</span>
           <h1>Neuroplasticity &amp; Development Laboratory</h1>
-          <p class="affil">Department of Psychological &amp; Brain Sciences, Johns Hopkins University</p>
           <div class="btns">
             <a class="btn btn-primary" href="research.html">Explore our research</a>
             <a class="btn btn-ghost" href="participate.html">Participate in a study</a>
@@ -67,12 +74,6 @@
   </section>
 
   <section class="thesis">
-    <aside class="thesis-margin thesis-margin--left" aria-hidden="true">
-      <div id="thesis-shader-left" class="thesis-margin__shader"></div>
-    </aside>
-    <aside class="thesis-margin thesis-margin--right" aria-hidden="true">
-      <div id="thesis-shader-right" class="thesis-margin__shader"></div>
-    </aside>
     <div class="thesis-frame">
       <div class="thesis-grid">
         <p class="thesis-lead">How does developmental experience affect the human mind and brain?</p>
@@ -86,37 +87,63 @@
   </section>
 
   <section class="block"><div class="wrap">
-    <div class="sec-head"><h2>Research</h2><span class="rule"></span>
-      <span class="more"><a href="research.html">All research areas →</a></span></div>
+    <div class="sec-head"><h2>Research Areas</h2><span class="rule"></span></div>
 
     <div class="area">
-      <figure class="fig">
-        <img src="images/Visual_Cortex.jpg" alt="Brain maps for sighted, late-blind, and congenitally blind people beside bar charts; in congenitally blind people, occipital 'visual' cortex responds during math and language tasks.">
-        <figcaption>Math- and language-responsive "visual" cortex in congenitally blind adults.</figcaption>
+      <figure class="fig fig--sm">
+        <img src="images/selected%20photos/blind%20drawing.jpeg" alt="">
       </figure>
       <div>
-        <span class="num">01 — Plasticity</span>
-        <h3>Cortical plasticity in blindness</h3>
-        <p>In sighted people, much of the occipital lobe is dedicated to vision. What happens when it
-          never receives its typical input? In blindness, "visual" areas take on higher-cognitive
-          functions — language, mathematical reasoning, and executive control — revealing how
-          experience shapes cortical specialization.</p>
-        <a class="read" href="research.html">Read more</a>
+        <h3>Development and plasticity in Deafness and blindness</h3>
+        <p>Large sections of the primate cortex are dedicated to sensory input, but what happens when
+          these parts of the brain do not receive "species typical input" during development? Are these
+          areas repurposed to support non-canonical cognitive
+          functions&hellip; <a class="read" href="research.html#plasticity">Read more</a></p>
       </div>
     </div>
 
     <div class="area flip">
       <figure class="fig">
-        <img src="images/MDS.png" alt="Two word maps comparing how blind and sighted adults organize visual verbs such as 'peek', 'glance', and 'stare'; the overall arrangement is strikingly similar across groups.">
-        <figcaption>How blind and sighted adults organize knowledge of vision-related words.</figcaption>
+        <div class="fig-pair">
+          <img src="images/selected%20photos/sign%20language%20pic.png" alt="A signer beside brain maps showing responses to stories, sentences, and words.">
+          <img src="images/selected%20photos/braille%20reader%20group.jpeg" alt="A group in the lab with a refreshable Braille display.">
+        </div>
+        <figcaption>Language can be expressed and learned through speech, sign, touch, and print.</figcaption>
       </figure>
       <div>
-        <span class="num">02 — Concepts</span>
-        <h3>Conceptual development</h3>
-        <p>How does experience contribute to the concepts we form? We compare what blind and sighted
-          people know about things only directly accessible through vision — light, color, and acts of
-          seeing — to isolate the roles of sensory experience and of language in human knowledge.</p>
-        <a class="read" href="research.html">Read more</a>
+        <h3>Language across modalities</h3>
+        <p>Complex language is a hallmark of human cognition. Decades of prior research have studied
+          the brain's ability to support language in its spoken and written modalities, but little is
+          understood regarding the development of linguistic
+          ability&hellip; <a class="read" href="research.html#language">Read more</a></p>
+      </div>
+    </div>
+
+    <div class="area">
+      <figure class="fig">
+        <img src="images/selected%20photos/code%20brain%20pic.png" alt="Colorful brain activation maps overlaid on computer code.">
+        <figcaption>Recent cultural inventions, such as programming, provide tests of expert cognition.</figcaption>
+      </figure>
+      <div>
+        <h3>Cultural expertise</h3>
+        <p>Many of our cognitive capabilities and the cortical structures on which they depend were
+          developed over evolutionary timescales. This includes memory, sensation, motility, and
+          social reasoning. However, a core feature of intelligence is
+          adaptability&hellip; <a class="read" href="research.html#expertise">Read more</a></p>
+      </div>
+    </div>
+
+    <div class="area flip">
+      <figure class="fig">
+        <img src="images/selected%20photos/light%20word%20map.png" alt="Word maps comparing how blind and sighted adults organize vision-related and touch-related verbs.">
+        <figcaption>Experience and language both contribute to how concepts are organized.</figcaption>
+      </figure>
+      <div>
+        <h3>Concepts and experience</h3>
+        <p>Our language, behavior, and our internal models of the world are founded on our ability to
+          form concepts; but how do we build these concepts through our experience and how are they
+          represented in the
+          brain&hellip; <a class="read" href="research.html#concepts">Read more</a></p>
       </div>
     </div>
   </div></section>
@@ -134,8 +161,8 @@
 
   <section class="join">
     <div class="join-photos" aria-hidden="true">
-      <img src="images/Lindsay_brain_photo.jpg" alt="">
-      <img src="images/marina_judy_tms.jpg" alt="">
+      <img src="images/people/Lindsay_brain_photo.jpg" alt="">
+      <img src="images/selected%20photos/marina_judy_tms.jpg" alt="">
       <img src="images/timeline/2017/tms.jpg" alt="">
     </div>
     <div class="scrim"></div>

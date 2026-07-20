@@ -4,20 +4,29 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Research — Neuroplasticity &amp; Development Lab</title>
-<meta name="description" content="An overview of the Neuroplasticity &amp; Development Lab's research areas: cortical plasticity in blindness and conceptual development.">
+<meta name="description" content="An overview of the Neuroplasticity &amp; Development Lab's research areas: development and plasticity in Deafness and blindness, language across modalities, cultural expertise, and concepts and experience.">
 <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
 
 <a class="skip" href="#main">Skip to main content</a>
 <!-- SHARED HEADER — keep identical across all pages; only change aria-current -->
+<input type="checkbox" id="nav-toggle" class="nav-toggle-cb" aria-label="Open navigation menu">
 <header class="site">
   <div class="wrap bar">
+    <label class="nav-toggle" for="nav-toggle" aria-hidden="true"><span class="nav-toggle__bars"></span></label>
     <a class="brand" href="index.html">
       <b>Neuroplasticity &amp; Development Lab</b>
       <span>Bedny Lab · Johns Hopkins</span>
     </a>
-    <nav class="main" aria-label="Primary">
+  </div>
+</header>
+<label class="nav-overlay" for="nav-toggle" aria-hidden="true"></label>
+<nav class="main drawer" id="site-nav" aria-label="Primary">
+  <div class="drawer__head">
+    <span class="drawer__title">Menu</span>
+    <label class="nav-close" for="nav-toggle" aria-label="Close navigation menu">&times;</label>
+  </div>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="research.html" aria-current="page">Research</a></li>
@@ -28,16 +37,14 @@
         <li><a href="participate.html" class="cta">Participate</a></li>
         <li><a href="asset-reference.html" class="nav-dev">Assets</a></li>
       </ul>
-    </nav>
-  </div>
-</header>
+</nav>
 <!-- /SHARED HEADER -->
 
 <main id="main">
 <div class="page-head">
   <div class="wrap">
     <span class="kicker">Research</span>
-    <h1>Research</h1>
+    <h1>Research Areas</h1>
     <p>How does developmental experience shape the human mind and brain? We investigate these questions by comparing the minds and brains of people with different developmental experiences.</p>
   </div>
 </div>
@@ -45,30 +52,56 @@
   <section class="block">
     <div class="wrap">
 
-      <div class="area">
-        <figure class="fig">
-          <img src="images/Visual_Cortex.jpg" alt="Brain maps for sighted, late-blind, and congenitally blind people beside bar charts; in congenitally blind people, occipital 'visual' cortex responds during math and language tasks.">
-          <figcaption>Math- and language-responsive "visual" cortex in congenitally blind adults.</figcaption>
+      <div class="area" id="plasticity">
+        <figure class="fig fig--sm">
+          <img src="images/selected%20photos/blind%20drawing.jpeg" alt="">
         </figure>
         <div>
-          <span class="num">01 — Plasticity</span>
-          <h2>Cortical Plasticity</h2>
-          <p>How does developmental experience affect the human mind and brain? What is the role of experience in structuring concepts of events, objects and mental states? How are such abstract concepts implemented in neural circuits? Our lab investigates these longstanding philosophical puzzles using the methods of cognitive neuroscience and psychology.
-          We study the origins and structure of human cognition by comparing the minds and brains of people with different developmental experiences.</p>
-          <p>To examine the effects of nature and nurture on the human brain, we compare the minds and brains of sighted, congenitally blind and late-blind individuals. Areas of the primate occipital lobe are called "visual cortex" because in sighted people they respond almost exclusively to light. One line of work examines the acquisition of novel functions by visual cortex in blind individuals. In people who are blind, occipital cortex responds to touch, sound and even language. One of our goals is to uncover the cognitive functions that are supported by the occipital cortex in blind people. Are these functions similar to vision? Are they related to the function of nearby cortical tissue? Do the functional subdivisions within occipital cortex mirror organization elsewhere in the brain? We also work with blind and sighted children to study the time-course and mechanisms of cortical plasticity. Visual cortex plasticity provides a window into how genes and experience sculpt cortical function during development.</p>
+          <h2>Development and plasticity in Deafness and blindness</h2>
+          <p>Large sections of the primate cortex are dedicated to sensory input, but what happens when these parts of the brain do not receive "species typical input" during development? Are these areas repurposed to support non-canonical cognitive functions, and are these functions similar to vision or audition? We examine "visual" and "auditory" cortex plasticity in blindness and deafness to investigate this question.</p>
+          <p>In blindness, we find that "visual" areas become involved in higher-cognitive functions including language, mathematical reasoning, and non-verbal executive control. Furthermore, these functions each recruit different parts of the "visual" cortex. These examinations provide insights into the mechanisms that determine cortical specialization in humans.</p>
           <a class="read" href="publications.html">See related publications</a>
         </div>
       </div>
 
-      <div class="area flip">
+      <div class="area flip" id="language">
         <figure class="fig">
-          <img src="images/MDS.png" alt="Two word maps comparing how blind and sighted adults organize visual verbs such as 'peek', 'glance', and 'stare'; the overall arrangement is strikingly similar across groups.">
-          <figcaption>How blind and sighted adults organize knowledge of vision-related words.</figcaption>
+          <div class="fig-pair">
+            <img src="images/selected%20photos/sign%20language%20pic.png" alt="A signer beside brain maps showing responses to stories, sentences, and words.">
+            <img src="images/selected%20photos/braille%20reader%20group.jpeg" alt="A group in the lab with a refreshable Braille display.">
+          </div>
+          <figcaption>Language can be expressed and learned through speech, sign, touch, and print.</figcaption>
         </figure>
         <div>
-          <span class="num">02 — Concepts</span>
-          <h2>Conceptual Development</h2>
-          <p>A second line of work examines how experience contributes to concept formation. We use behavioral and neural measures to study concepts of events, objects and mental states in blind individuals. For example, are there differences between blind and sighted people's concepts of sight perception (e.g. the meanings of sight verbs such as "stare" and "glance"). What do blind adults know about events that could only be experienced through sight such as "sparkling" and "flashing?" How do blind children acquire such information?</p>
+          <h2>Language across modalities</h2>
+          <p>Complex language is a hallmark of human cognition. Decades of prior research have studied the brain's ability to support language in its spoken and written modalities, but little is understood regarding the development of linguistic ability when either is unavailable. In these cases, people are able to adapt by using other senses to facilitate communication.</p>
+          <p>Our lab studies the brains of developing and proficient signers and braille-readers to identify both modality-invariant and modality-specific aspects of language development using fMRI and TMS.</p>
+          <a class="read" href="publications.html">See related publications</a>
+        </div>
+      </div>
+
+      <div class="area" id="expertise">
+        <figure class="fig">
+          <img src="images/selected%20photos/code%20brain%20pic.png" alt="Colorful brain activation maps overlaid on computer code.">
+          <figcaption>Recent cultural inventions, such as programming, provide tests of expert cognition.</figcaption>
+        </figure>
+        <div>
+          <h2>Cultural expertise</h2>
+          <p>Many of our cognitive capabilities and the cortical structures on which they depend were developed over evolutionary timescales. This includes memory, sensation, motility, and social reasoning. However, a core feature of intelligence is adaptability. Humans in particular display an exceptional capacity to develop culturally relevant skills (like coding or medicine) more quickly than new cortical architecture could evolve to support them. So, how does the brain achieve expertise so rapidly?</p>
+          <p>We study this capacity using fMRI, observing the brain as people become proficient and reach expertise in cultural skills. How much does the brain rely on related specialized structures to adapt to new demands? Do new skills displace old skills in the cortex? Our analyses aim to provide answers to these questions.</p>
+          <a class="read" href="publications.html">See related publications</a>
+        </div>
+      </div>
+
+      <div class="area flip" id="concepts">
+        <figure class="fig">
+          <img src="images/selected%20photos/light%20word%20map.png" alt="Word maps comparing how blind and sighted adults organize vision-related and touch-related verbs.">
+          <figcaption>Experience and language both contribute to how concepts are organized.</figcaption>
+        </figure>
+        <div>
+          <h2>Concepts and experience</h2>
+          <p>Our language, behavior, and our internal models of the world are founded on our ability to form concepts; but how do we build these concepts through our experience and how are they represented in the brain? Our lab is primarily focused on acquisition: how much of our conceptual knowledge is innate, how much is derived from direct sensory experience, and how much can be learned from language alone?</p>
+          <p>We investigate these questions with the help of congenitally blind individuals using fMRI and behavioral measures. Even without direct experience, blind individuals are able to describe visual concepts accurately and use them predictively.</p>
           <a class="read" href="publications.html">See related publications</a>
         </div>
       </div>
