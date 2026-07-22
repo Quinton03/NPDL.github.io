@@ -100,10 +100,6 @@ nav.main.drawer a[aria-current="page"]{color:#fff;background:var(--teal);box-sha
 nav.main.drawer a.cta{background:#fff;color:var(--ink);margin-top:12px;text-align:left;
      text-transform:uppercase;letter-spacing:.04em}
 nav.main.drawer a.cta:hover{background:var(--teal-pale);color:var(--ink)}
-nav.main.drawer a.nav-dev{font-size:14px;font-weight:600;color:rgba(255,255,255,.55);
-     border:1px dashed rgba(255,255,255,.28);margin-top:12px}
-nav.main.drawer a.nav-dev:hover{color:#fff;background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.45)}
-nav.main.drawer a.nav-dev[aria-current="page"]{color:var(--teal-pale);border-style:solid;background:transparent}
 
 /* open state */
 .nav-toggle-cb:checked ~ nav.main.drawer{transform:translateX(0)}
