@@ -13,11 +13,16 @@
 <input type="checkbox" id="nav-toggle" class="nav-toggle-cb" aria-label="Open navigation menu">
 <header class="site">
   <div class="wrap bar">
-    <label class="nav-toggle" for="nav-toggle" aria-hidden="true"><span class="nav-toggle__bars"></span></label>
-    <a class="brand" href="index.html">
-      <b>Neuroplasticity &amp; Development Lab</b>
-      <span>Bedny Lab · Johns Hopkins</span>
-    </a>
+    <div class="bar__left">
+      <label class="nav-toggle" for="nav-toggle" aria-hidden="true"><span class="nav-toggle__bars"></span></label>
+      <a class="brand" href="index.html">
+        <b>Neuroplasticity &amp; Development Lab</b>
+      </a>
+    </div>
+    <div class="bar__right">
+      <span class="bar__org">Johns Hopkins University</span>
+      <span class="bar__dept">Department of Psychological and Brain Sciences</span>
+    </div>
   </div>
 </header>
 <label class="nav-overlay" for="nav-toggle" aria-hidden="true"></label>
@@ -33,147 +38,275 @@
         <li><a href="people.html">People</a></li>
         <li><a href="news.html">News</a></li>
         <li><a href="photos.html">Photos</a></li>
+        <li><a href="logistics.html">Logistics</a></li>
         <li><a href="participate.html" class="cta">Participate</a></li>
         <li><a href="asset-reference.html" class="nav-dev">Assets</a></li>
       </ul>
 </nav>
 <!-- /SHARED HEADER -->
 
-<!-- Measures the real sticky-header height so the hero below can fill exactly
-     the remaining viewport height. Progressive enhancement only: the CSS
-     fallback value is used if JavaScript is unavailable. -->
+<!-- Measures sticky-header height and solidifies the bar after the hero. -->
 <script>
 (function(){
-  var header = document.querySelector('header.site');
-  function setHeaderHeight(){
-    if (header) document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+  function initHeader(){
+    var header = document.querySelector('header.site');
+    var hero = document.querySelector('.hero');
+    if (!header) return;
+    function setHeaderHeight(){
+      document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+    }
+    function setHeaderScrolled(){
+      if (!hero) return;
+      var threshold = Math.max(24, hero.offsetHeight - header.offsetHeight);
+      header.classList.toggle('is-scrolled', window.scrollY >= threshold);
+    }
+    setHeaderHeight();
+    setHeaderScrolled();
+    window.addEventListener('resize', function(){ setHeaderHeight(); setHeaderScrolled(); });
+    window.addEventListener('scroll', setHeaderScrolled, {passive:true});
   }
-  setHeaderHeight();
-  window.addEventListener('resize', setHeaderHeight);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHeader);
+  } else {
+    initHeader();
+  }
 })();
 </script>
 
 <main id="main">
   <section class="hero">
-    <div class="wrap">
-      <p class="affil">Department of Psychological &amp; Brain Sciences<br>Johns Hopkins University</p>
-      <div class="grid rev">
-        <figure class="mark">
-          <img src="images/bednylab_logo.svg" alt="Neuroplasticity &amp; Development Lab logo: a line drawing of a tree whose canopy forms the shape of a brain, with roots branching down into symbols for numbers, letters, faces, and music.">
-        </figure>
-        <div>
-          <span class="kicker" style="color:var(--teal-pale)">Dr. Marina Bedny</span>
-          <h1>Neuroplasticity &amp; Development Laboratory</h1>
-          <div class="btns">
-            <a class="btn btn-primary" href="research.html">Explore our research</a>
-            <a class="btn btn-ghost" href="participate.html">Participate in a study</a>
-          </div>
+    <h1 class="sr-only">Neuroplasticity &amp; Development Laboratory</h1>
+    <div class="hero__carousels" aria-hidden="true">
+      <div class="hero__row">
+        <div class="hero__track">
+          <img src="images/selected%20photos/kayak%20group.jpeg" alt="">
+          <img src="images/selected%20photos/emily%20presentation.jpeg" alt="">
+          <img src="images/selected%20photos/bowling%20selfie%20group.jpeg" alt="">
+          <img src="images/selected%20photos/marina_judy_tms.jpg" alt="">
+          <img src="images/park%20group%20pic.jpeg" alt="">
+          <img src="images/group%20in%20ny.jpeg" alt="">
+          <img src="images/selfie%20infront%20of%20lake.jpeg" alt="">
+          <img src="images/selected%20photos/kayak%20group.jpeg" alt="">
+          <img src="images/selected%20photos/emily%20presentation.jpeg" alt="">
+          <img src="images/selected%20photos/bowling%20selfie%20group.jpeg" alt="">
+          <img src="images/selected%20photos/marina_judy_tms.jpg" alt="">
+          <img src="images/park%20group%20pic.jpeg" alt="">
+          <img src="images/group%20in%20ny.jpeg" alt="">
+          <img src="images/selfie%20infront%20of%20lake.jpeg" alt="">
         </div>
       </div>
+      <div class="hero__row">
+        <div class="hero__track">
+          <img src="images/selected%20photos/in%20lab%20group.jpeg" alt="">
+          <img src="images/selected%20photos/halloween%20group.jpeg" alt="">
+          <img src="images/selected%20photos/braille%20reader%20group.jpeg" alt="">
+          <img src="images/selected%20photos/ziwen%20talk.jpeg" alt="">
+          <img src="images/backyard%20party%203.jpeg" alt="">
+          <img src="images/timeline/2017/tms.jpg" alt="">
+          <img src="images/3%20in%20front%20of%20lake.jpeg" alt="">
+          <img src="images/selected%20photos/in%20lab%20group.jpeg" alt="">
+          <img src="images/selected%20photos/halloween%20group.jpeg" alt="">
+          <img src="images/selected%20photos/braille%20reader%20group.jpeg" alt="">
+          <img src="images/selected%20photos/ziwen%20talk.jpeg" alt="">
+          <img src="images/backyard%20party%203.jpeg" alt="">
+          <img src="images/timeline/2017/tms.jpg" alt="">
+          <img src="images/3%20in%20front%20of%20lake.jpeg" alt="">
+        </div>
+      </div>
+      <div class="hero__row">
+        <div class="hero__track">
+          <img src="images/selected%20photos/hotpot%20group%202.jpeg" alt="">
+          <img src="images/selected%20photos/akshi%20talk.jpeg" alt="">
+          <img src="images/selected%20photos/Lindsay_brain_photo.png" alt="">
+          <img src="images/hotpot%20group%203.jpeg" alt="">
+          <img src="images/timeline/group%20selfie%20outside.jpeg" alt="">
+          <img src="images/mariam%26sophia%20presentation.jpeg" alt="">
+          <img src="images/timeline/2016/judy_giulia_apple_picking.jpeg" alt="">
+          <img src="images/selected%20photos/hotpot%20group%202.jpeg" alt="">
+          <img src="images/selected%20photos/akshi%20talk.jpeg" alt="">
+          <img src="images/selected%20photos/Lindsay_brain_photo.png" alt="">
+          <img src="images/hotpot%20group%203.jpeg" alt="">
+          <img src="images/timeline/group%20selfie%20outside.jpeg" alt="">
+          <img src="images/mariam%26sophia%20presentation.jpeg" alt="">
+          <img src="images/timeline/2016/judy_giulia_apple_picking.jpeg" alt="">
+        </div>
+      </div>
+    </div>
+    <!--
+      Custom glass (not simple-liquid-glass): that library always puts the mirror-fold
+      at the element center with no position control. Our SVG map uses --hero-fold-x.
+    -->
+    <div class="hero__brand">
+      <svg class="hero__filter-defs" aria-hidden="true" focusable="false">
+        <filter id="hero-glass-fold" color-interpolation-filters="sRGB" x="0" y="0" width="1" height="1">
+          <!-- Neutral gray=128. Fold (mirror seam) at ~96% across; tweak stop offsets to move it. -->
+          <feImage result="map" preserveAspectRatio="none" width="100%" height="100%"
+            href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0%25' stop-color='rgb(118,128,128)'/%3E%3Cstop offset='92%25' stop-color='rgb(122,128,128)'/%3E%3Cstop offset='96%25' stop-color='rgb(128,128,128)'/%3E%3Cstop offset='99%25' stop-color='rgb(134,128,128)'/%3E%3Cstop offset='100%25' stop-color='rgb(142,128,128)'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23g)'/%3E%3C/svg%3E"/>
+          <feDisplacementMap in="SourceGraphic" in2="map" scale="12" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+      </svg>
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="hero__glass" aria-hidden="true"></div>
+      <img class="hero__logo" src="images/bednylab_logo.svg" alt="Neuroplasticity &amp; Development Lab logo: a line drawing of a tree whose canopy forms the shape of a brain, with roots branching down into symbols for numbers, letters, faces, and music.">
+      <div class="hero__gleam" aria-hidden="true"></div>
+      <div class="hero__brand-shade" aria-hidden="true"></div>
     </div>
   </section>
 
   <section class="thesis">
-    <div class="thesis-frame">
-      <div class="thesis-grid">
-        <p class="thesis-lead">How does developmental experience affect the human mind and brain?</p>
-        <p class="thesis-body">What is the role of experience in structuring concepts of events, objects
-          and mental states? How are such abstract concepts implemented in neural circuits? Our lab
-          investigates these longstanding philosophical puzzles using the methods of cognitive
-          neuroscience and psychology. We study the origins and structure of human cognition by comparing
-          the minds and brains of people with different developmental experiences.</p>
+    <nav class="thesis-side" aria-label="Get involved">
+      <div class="thesis-side__id">
+        <img class="thesis-side__photo" src="images/people/marina_picture.jpg" alt="Portrait of Dr. Marina Bedny.">
+        <p class="thesis-side__lab">Dr. Marina Bedny</p>
       </div>
+      <div class="thesis-side__btns">
+        <a class="btn" href="join_lab.html">Join</a>
+        <a class="btn" href="participate.html">Participate</a>
+        <a class="btn" href="people.html">People</a>
+        <a class="btn" href="logistics.html">Locate</a>
+      </div>
+    </nav>
+    <div class="thesis-main">
+      <p class="thesis-lead">How does developmental experience affect the human mind and brain?</p>
+      <p class="thesis-body">What is the role of experience in structuring concepts of events, objects
+        and mental states? How are such abstract concepts implemented in neural circuits? Our lab
+        investigates these longstanding philosophical puzzles using the methods of cognitive
+        neuroscience and psychology. We study the origins and structure of human cognition by comparing
+        the minds and brains of people with different developmental experiences.</p>
     </div>
   </section>
 
-  <section class="block"><div class="wrap">
-    <div class="sec-head"><h2>Research Areas</h2><span class="rule"></span></div>
-
-    <div class="area">
-      <figure class="fig fig--sm">
-        <img src="images/selected%20photos/blind%20drawing.jpeg" alt="">
-      </figure>
-      <div>
-        <h3>Development and plasticity in Deafness and blindness</h3>
-        <p>Large sections of the primate cortex are dedicated to sensory input, but what happens when
-          these parts of the brain do not receive "species typical input" during development? Are these
-          areas repurposed to support non-canonical cognitive
-          functions&hellip; <a class="read" href="research.html#plasticity">Read more</a></p>
+  <section class="fold-stack">
+    <div class="fold is-open">
+      <div class="fold-head">
+        <h2 class="spine-title"><a href="research.html">Research</a></h2>
+        <button type="button" class="fold-toggle" aria-expanded="true" aria-controls="panel-research" aria-label="Collapse Research section">
+          <span class="fold-toggle__arrow" aria-hidden="true"></span>
+        </button>
       </div>
-    </div>
+      <div class="fold-panel areas is-open" id="panel-research">
+        <div class="wrap">
+          <div class="areas-list">
+            <div class="area">
+              <figure class="fig fig--sm">
+                <img src="images/selected%20photos/blind%20drawing.jpeg" alt="">
+              </figure>
+              <div>
+                <h3>Development and plasticity in Deafness and blindness</h3>
+                <p>Large sections of the primate cortex are dedicated to sensory input, but what happens when
+                  these parts of the brain do not receive "species typical input" during development? Are these
+                  areas repurposed to support non-canonical cognitive
+                  functions&hellip; <a class="read" href="research.html#plasticity">Read more</a></p>
+              </div>
+            </div>
 
-    <div class="area flip">
-      <figure class="fig">
-        <div class="fig-pair">
-          <img src="images/selected%20photos/sign%20language%20pic.png" alt="A signer beside brain maps showing responses to stories, sentences, and words.">
-          <img src="images/selected%20photos/braille%20reader%20group.jpeg" alt="A group in the lab with a refreshable Braille display.">
+            <div class="area flip">
+              <figure class="fig">
+                <div class="fig-pair">
+                  <img src="images/selected%20photos/sign%20language%20pic.png" alt="A signer beside brain maps showing responses to stories, sentences, and words.">
+                  <img src="images/selected%20photos/braille%20reader%20group.jpeg" alt="A group in the lab with a refreshable Braille display.">
+                </div>
+              </figure>
+              <div>
+                <h3>Language across modalities</h3>
+                <p>Complex language is a hallmark of human cognition. Decades of prior research have studied
+                  the brain's ability to support language in its spoken and written modalities, but little is
+                  understood regarding the development of linguistic
+                  ability&hellip; <a class="read" href="research.html#language">Read more</a></p>
+              </div>
+            </div>
+
+            <div class="area">
+              <figure class="fig">
+                <img src="images/selected%20photos/code%20brain%20pic.png" alt="Colorful brain activation maps overlaid on computer code.">
+              </figure>
+              <div>
+                <h3>Cultural expertise</h3>
+                <p>Many of our cognitive capabilities and the cortical structures on which they depend were
+                  developed over evolutionary timescales. This includes memory, sensation, motility, and
+                  social reasoning. However, a core feature of intelligence is
+                  adaptability&hellip; <a class="read" href="research.html#expertise">Read more</a></p>
+              </div>
+            </div>
+
+            <div class="area flip">
+              <figure class="fig">
+                <img src="images/selected%20photos/light%20word%20map.png" alt="Word maps comparing how blind and sighted adults organize vision-related and touch-related verbs.">
+              </figure>
+              <div>
+                <h3>Concepts and experience</h3>
+                <p>Our language, behavior, and our internal models of the world are founded on our ability to
+                  form concepts; but how do we build these concepts through our experience and how are they
+                  represented in the
+                  brain&hellip; <a class="read" href="research.html#concepts">Read more</a></p>
+              </div>
+            </div>
+          </div>
         </div>
-        <figcaption>Language can be expressed and learned through speech, sign, touch, and print.</figcaption>
-      </figure>
-      <div>
-        <h3>Language across modalities</h3>
-        <p>Complex language is a hallmark of human cognition. Decades of prior research have studied
-          the brain's ability to support language in its spoken and written modalities, but little is
-          understood regarding the development of linguistic
-          ability&hellip; <a class="read" href="research.html#language">Read more</a></p>
       </div>
     </div>
 
-    <div class="area">
-      <figure class="fig">
-        <img src="images/selected%20photos/code%20brain%20pic.png" alt="Colorful brain activation maps overlaid on computer code.">
-        <figcaption>Recent cultural inventions, such as programming, provide tests of expert cognition.</figcaption>
-      </figure>
-      <div>
-        <h3>Cultural expertise</h3>
-        <p>Many of our cognitive capabilities and the cortical structures on which they depend were
-          developed over evolutionary timescales. This includes memory, sensation, motility, and
-          social reasoning. However, a core feature of intelligence is
-          adaptability&hellip; <a class="read" href="research.html#expertise">Read more</a></p>
+    <div class="fold">
+      <div class="fold-head">
+        <h2 class="spine-title"><a href="publications.html">Recent work</a></h2>
+        <button type="button" class="fold-toggle" aria-expanded="false" aria-controls="panel-recent" aria-label="Expand Recent work section">
+          <span class="fold-toggle__arrow" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="fold-panel" id="panel-recent" hidden>
+        <div class="wrap">
+          <div class="pubcard">
+            <span class="tag">Featured</span>
+            <h3>Sensitive period for cognitive repurposing of human visual cortex</h3>
+            <p class="cite">Kanjlia, S., Pant, R., &amp; Bedny, M. (2018). Cerebral Cortex.</p>
+            <a class="read" href="pubs/sensitive_period_2018.pdf">Read the paper</a>
+          </div>
+          <p class="fold-more"><a href="publications.html">All publications →</a></p>
+        </div>
       </div>
     </div>
 
-    <div class="area flip">
-      <figure class="fig">
-        <img src="images/selected%20photos/light%20word%20map.png" alt="Word maps comparing how blind and sighted adults organize vision-related and touch-related verbs.">
-        <figcaption>Experience and language both contribute to how concepts are organized.</figcaption>
-      </figure>
-      <div>
-        <h3>Concepts and experience</h3>
-        <p>Our language, behavior, and our internal models of the world are founded on our ability to
-          form concepts; but how do we build these concepts through our experience and how are they
-          represented in the
-          brain&hellip; <a class="read" href="research.html#concepts">Read more</a></p>
+    <div class="fold">
+      <div class="fold-head">
+        <h2 class="spine-title"><a href="news.html">News</a></h2>
+        <button type="button" class="fold-toggle" aria-expanded="false" aria-controls="panel-news" aria-label="Expand News section">
+          <span class="fold-toggle__arrow" aria-hidden="true"></span>
+        </button>
       </div>
-    </div>
-  </div></section>
-
-  <section class="block alt"><div class="wrap">
-    <div class="sec-head"><h2>Recent work</h2><span class="rule"></span>
-      <span class="more"><a href="publications.html">All publications →</a></span></div>
-    <div class="pubcard">
-      <span class="tag">Featured</span>
-      <h3>Sensitive period for cognitive repurposing of human visual cortex</h3>
-      <p class="cite">Kanjlia, S., Pant, R., &amp; Bedny, M. (2018). Cerebral Cortex.</p>
-      <a class="read" href="pubs/sensitive_period_2018.pdf">Read the paper</a>
-    </div>
-  </div></section>
-
-  <section class="join">
-    <div class="join-photos" aria-hidden="true">
-      <img src="images/people/Lindsay_brain_photo.jpg" alt="">
-      <img src="images/selected%20photos/marina_judy_tms.jpg" alt="">
-      <img src="images/timeline/2017/tms.jpg" alt="">
-    </div>
-    <div class="scrim"></div>
-    <div class="wrap">
-      <span class="kicker">Get involved</span>
-      <h2>Take part in our research, or join the lab</h2>
-      <p>We work with blind and sighted volunteers, and we welcome curious students and researchers.
-        There's a place for you in this work.</p>
-      <div class="btns">
-        <a class="btn btn-primary" href="participate.html">Participate in a study</a>
-        <a class="btn btn-ghost" href="join_lab.html">Join the lab</a>
+      <div class="fold-panel" id="panel-news" hidden>
+        <div class="wrap">
+          <ul class="news">
+            <li>
+              <span class="date">October 2025</span>
+              <div>
+                <h2>Lab's work featured on Earth.com</h2>
+                <p>Lab's work is featured on <a href="https://www.earth.com/news/our-brains-are-wired-to-learn-computer-code/">Earth.com</a>.</p>
+              </div>
+            </li>
+            <li>
+              <span class="date">October 2025</span>
+              <div>
+                <h2>Lab's work featured on JHU Hub</h2>
+                <p>Lab's work is featured on <a href="https://hub.jhu.edu/2025/10/27/how-brains-learn-to-code/">JHU Hub</a>.</p>
+              </div>
+            </li>
+            <li>
+              <span class="date">February 2023</span>
+              <div>
+                <h2>Marina, Liz, and Sherria featured on the Maryland State Library Agency Podcast</h2>
+                <p>Marina, Liz, and Sherria are guest featured on the <a href="https://podcasters.spotify.com/pod/show/mdstatelibrary/episodes/LBPD-Guest-Hour-John-Hopkins-University-Neuroplasticity-Cognition-Study-e1u05b3">Maryland State Library Agency Podcast</a>.</p>
+              </div>
+            </li>
+            <li>
+              <span class="date">March 2021</span>
+              <div>
+                <h2>Yun-Fei awarded Alumni Choice in the 2021 Three Minute Thesis Competition</h2>
+                <p>Yun-Fei is awarded the Alumni Choice in the <a href="https://pbs.jhu.edu/2021/04/14/yun-fei-liu-3-minute-thesis-winner/">2021 Three Minute Thesis Competition</a>.</p>
+              </div>
+            </li>
+          </ul>
+          <p class="fold-more"><a href="news.html">All news →</a></p>
+        </div>
       </div>
     </div>
   </section>
@@ -193,6 +326,7 @@
         <li><a href="publications.html">Publications</a></li>
         <li><a href="people.html">People</a></li>
         <li><a href="join_lab.html">Join the Lab</a></li>
+        <li><a href="logistics.html">Logistics</a></li>
         <li><a href="resources-and-data.html">Resources &amp; Data</a></li>
       </ul>
     </nav>
@@ -210,5 +344,6 @@
 </footer>
 <!-- /SHARED FOOTER -->
 <script src="js/hero-fx.js" defer></script>
+<script src="js/fold.js" defer></script>
 </body>
 </html>
